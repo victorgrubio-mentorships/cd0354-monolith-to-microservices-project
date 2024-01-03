@@ -13,13 +13,15 @@ services:
     env_file:
      - .env
     ports:
-     - "8080:80"
+     - "8080:8080"
   backend-user:
     image: udagram-api-user:latest
     networks:
      - backend
     env_file:
      - .env
+    volumes:
+     - ./.aws:/root/.aws
   backend-feed:
     image: udagram-api-feed:latest
     networks:
