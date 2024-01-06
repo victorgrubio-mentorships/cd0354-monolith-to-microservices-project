@@ -167,7 +167,7 @@ At this moment, your project directory would have the following structure:
 
 
 
-2. **Create Images** - In the project's parent directory, create a [docker-compose-build.yaml](https://video.udacity-data.com/topher/2021/July/60e28b72_docker-compose-build/docker-compose-build.yaml) file. It will create an image for each individual service. Then, you can run the following command to create images locally:
+1. **Create Images** - In the project's parent directory, create a docker-compose.yaml file. It will create an image for each individual service. Then, you can run the following command to create images locally:
 ```bash
 # Make sure the Docker services are running in your local machine
 # Remove unused and dangling images
@@ -178,7 +178,7 @@ docker-compose -f docker-compose-build.yaml build --parallel
 >**Note**: YAML files are extremely indentation sensitive, that's why we have attached the files for you. 
 
 
-3. **Run containers** using the images created in the step above. Create another YAML file, [docker-compose.yaml](https://video.udacity-data.com/topher/2021/July/60e28b91_docker-compose/docker-compose.yaml),  in the project's parent directory. It will use the existing images and create containers. While creating containers, it defines the port mapping, and the container dependency. 
+1. **Run containers** using the images created in the step above. Create another YAML file, in the project's parent directory. It will use the existing images and create containers. While creating containers, it defines the port mapping, and the container dependency. 
 
  Once you have the YAML file above ready in your project directory, you can start the application using:
 ```bash
