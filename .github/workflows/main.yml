@@ -1,0 +1,28 @@
+name: Build and Push Docker Images
+
+on:
+  push:
+    branches:
+      - andrej-solution
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Log in to Docker Hub
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Build and Push Images
+        run: |
+          docker-compose -f docker-compose-build.yaml build
+          docker-compose -f docker-compose-build.yaml push
+
+      - name: Logout from Docker Hub
+        run: docker logout
