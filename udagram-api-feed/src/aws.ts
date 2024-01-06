@@ -4,8 +4,8 @@ import {config} from './config/config';
 
 // Configure AWS
 AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    accessKeyId: config.aws_access_key_id,
+    secretAccessKey: config.aws_secret_access_key
 });
 
 export const s3 = new AWS.S3({
