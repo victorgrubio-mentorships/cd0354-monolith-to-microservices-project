@@ -23,7 +23,7 @@
     "@awesome-cordova-plugins/splash-screen": "^6.6.0",
     "@awesome-cordova-plugins/status-bar": "^6.6.0",
     "@ionic/angular": "^7.6.2",
-    "@ionic/cli": "^7.1.6",
+    "@ionic/cli": "^7.2.0",
     "core-js": "^3.35.0",
     "fsevents": "^2.3.3",
     "rxjs": "~7.8.1",
